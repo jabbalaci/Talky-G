@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="US-ASCII"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+
+<hibernate-mapping auto-import="false">
+
+	<class name="coron.datastructure.Row_Universal_F_str" table="F">
+
+		<id name="id" type="integer" column="id" unsaved-value="null">
+			<generator class="native"/>
+		</id>
+
+		<property name="itemset"> 
+         <column name="itemset" sql-type="longvarchar" not-null="true" unique="true"/>
+      </property>
+      
+		<property name="supp" type="integer" column="support" not-null="true"/>
+
+		<property name="closed" type="boolean" column="closed"/>
+
+		<property name="key" type="boolean" column="key"/>
+
+		<list name="minGen" table="F_MINGEN">
+			<key column="f_id"/>
+			<index column="i"/>
+		   <element type="string">
+            <column name="minGen" sql-type="longvarchar" not-null="true"/>
+		   </element>
+		</list>
+
+	</class>
+
+</hibernate-mapping>
