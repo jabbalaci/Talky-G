@@ -29,7 +29,7 @@ Usage
 Here are some examples about how to use the software.
 It runs in the command-line.
 
-    $ java -jar target/talky-g-1.0-jar-with-dependencies.jar src/main/resources/sample/in.basenum 2 -alg:talkyg2
+    $ ./start.sh src/main/resources/sample/in.basenum 2 -alg:talkyg2
 
 Parameters:
 * input dataset
@@ -50,9 +50,9 @@ Available algorithms in this version:
 Further examples
 ----------------
 
-    $ java -jar target/talky-g-1.0-jar-with-dependencies.jar src/main/resources/sample/in.bool 2 -alg:talkyg2
+    $ ./start.sh src/main/resources/sample/in.bool 2 -alg:talkyg2
 
-    $ java -jar target/talky-g-1.0-jar-with-dependencies.jar src/main/resources/sample/in.rcf 2 -names -alg:talkyg2
+    $ ./start.sh src/main/resources/sample/in.rcf 2 -names -alg:talkyg2
 
 Notice the `-names` option when working with RCF datasets.
 If you add `-names`, attribute names are shown instead of
